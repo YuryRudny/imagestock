@@ -1,17 +1,24 @@
 .header
+	position: relative
+	font-size: 1em
 	background-color: $dark-color
-	padding: rem(90px) 0 rem(10px) 0
+	padding: em(90px) 0 0 0
+	.logo-block
+		margin-right: auto
+.header-line
+	margin-bottom: em(10px)
 	.col
 		display: flex
 		align-items: center
-	.logo-block
-		margin-right: auto
 .header-action__block
 	background-color: #000
-	padding: rem(10px) 0 rem(90px) 0
+	padding: em(10px) 0 em(90px) 0
+.home
+	.action__item--search
+		display: none
 .header-search__form
 	position: relative
-	margin-bottom: rem(30px)
+	margin-bottom: em(30px)
 	&::before
 		content: ''
 		display: block
@@ -29,14 +36,13 @@
 	width: 100%
 	border: none
 	outline: none
-	padding: rem(15px)
-	font-size: rem(72px)
+	padding: .2em
+	font-size: 4.5em
 	background-color: $tr
 	color: #fff
 	text-align: center
-
 	&::placeholder
-		font-size: rem(72px)
+		font-size: 1em
 		text-align: center
 		color: #fff
 .search-history
@@ -60,15 +66,45 @@
 			background: linear-gradient(to right, rgba(#000, .37) 0%, rgba(#000,1) 100%)
 		
 	li
-		margin-right: rem(22px)
+		margin-right: em(22px)
 		color: #fff
 		list-style-type: none
 		white-space: nowrap
+		font-size: rem(18px)
 		&:last-child
 			margin-right: 0
 .pages
 	.header
-		padding-top: rem(25px)
-		padding-bottom: rem(25px)
+		position: relative
+		padding-top: em(25px)
+		padding-bottom: em(25px)
 	.header-action__block
-		display: none
+		position: absolute
+		z-index: 10
+		left: 0
+		top: 100%
+		z-index: 50
+		height: 0
+		visibility: hidden
+		&.active
+			height: auto
+			visibility: visible
+.header-action__block--favorite
+	position: absolute
+	z-index: 10
+	left: 0
+	top: 100%
+	z-index: 50
+	height: 0
+	visibility: hidden
+	&.active
+		height: auto
+		visibility: visible
++media(1200px)
+	.header
+		font-size: .8em
+	.header-search__input
+		font-size: 2.9em
++media(575px)
+	.header
+		padding-top: 2.1em

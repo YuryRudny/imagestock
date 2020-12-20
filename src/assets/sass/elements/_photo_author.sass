@@ -1,0 +1,65 @@
+.photos-cart
+	figcaption
+		font-size: 1em
+	.photo-author
+		&:hover
+			transform: scale(1.05)
+.photo-author
+	line-height: 1.2
+	margin-top: auto
+	display: block
+	text-decoration: none
+	transition: transform .2s ease
+.author__avatar
+	width: em(70px)
+	height: em(70px)
+	box-sizing: border-box
+	border-radius: em(8px)
+	border: 1px solid #FFFFFF
+	margin-bottom: em(13px)
+.author__info
+	color: #ffffff
+	span
+		display: block
+.author__name
+	font-size: em(30px)
+.photo__action
+	margin-top: auto
+	margin-bottom: auto
+	ul
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0
+		padding: 0
+	li
+		list-style-type:  none
+		margin-right: em(45px)
+		&:last-child
+			margin-right: 0
+	button, a
+		padding: 0
+		background-color: $tr
+		&:hover
+			.icon
+				transform: scale(1.3)
+	.icon
+		color: #fff
+		font-size: em(28px)
+		transition: transform .2s ease
++media(1500px)
+	.photos-cart
+		figcaption
+			font-size: .8em
+	.photo__action
+		margin-top: rem(20px)
+
++media(768px)
+	.photos-cart
+		figcaption
+			font-size: .6em
++media(575px)
+	.photo-author
+		display: none
+	.photo__action
+		margin-top: auto

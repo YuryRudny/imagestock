@@ -13,7 +13,7 @@
 		padding: 0
 		vertical-align: middle
 		font-family: $font
-		font-size: rem(20px)
+		font-size: em(20px)
 		line-height: 1.2
 		color: #ffffff
 		text-decoration: none
@@ -23,17 +23,27 @@
 			display: block
 			position: absolute
 			right: 0
-			bottom: rem(-11px)
+			bottom: em(-11px)
 			width: 0
-			height: rem(3px)
+			height: em(3px)
 			background-color: #fff
 			transition: all .2s ease
 		&:hover
 			&::before
-				width: rem(30px)
+				width: em(30px)
 		.icon
-			font-size: rem(23px)
-			margin-right: rem(10px)
+			font-size: rem(24px)
+			margin-right: .5em
 			vertical-align: middle
 		&:hover
 			text-decoration: none
++media(768px)
+	.action-block 
+		.action-block__elem
+			&:hover
+				&::before
+					width: 100%
+			span
+				display: none
+			.icon
+				margin: 0

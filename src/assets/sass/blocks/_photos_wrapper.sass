@@ -1,9 +1,31 @@
 .photos-wrapper
-	display: grid
-	column-gap: rem(25px)
-	grid-template-columns: repeat(3,1fr)
+	padding-top: rem(30px)
+	&.grid--table
+		column-count: 3
+		column-gap: rem(20px)
+	&.grid--list
+		column-count: 2
+		column-gap: rem(20px)
 	figure
 		margin: 0
 		padding: 0
+		transition: all .3s ease
 	.main-photos
 		width: 100%
+		
++media(1500px)
+	.photos-wrapper
+		&.grid--table
+			column-count: 2
+		&.grid--list
+			column-count: 1
++media(768px)
+	.photos-wrapper
+		padding-top: 0
++media(575px)
+	.photos-wrapper
+		padding-top: 0
+		&.grid--table
+			column-gap: rem(10px)
+
+		

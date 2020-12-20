@@ -1,5 +1,4 @@
 .photos-wrapper
-	padding-top: 30px
 	figure
 		position: relative
 		line-height: 0
@@ -7,16 +6,17 @@
 		margin-bottom: rem(20px)
 		overflow: hidden
 		&:hover
-			&::before
+			.photo__link
 				opacity: 1
 			.main-photos
 				filter: blur(10px)
 				transform: scale(1.02)
 			figcaption
-				top: 0
+				top: 50%
+				transform: translate(-50%, -50%)
 				opacity: 1
 				visibility: visible
-		&::before
+		.photo__link
 			content: ''
 			position: absolute
 			z-index: 2
@@ -27,14 +27,13 @@
 			background-color: rgba(40, 36, 22, 0.5)
 			opacity: 0
 			transition: all .3s ease
-
 	figcaption
 		position: absolute
 		z-index: 5
-		left: 0
-		top: 10%
-		width: 100%
 		height: 100%
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -40%)
 		display: flex
 		align-items: center
 		justify-content: center
@@ -43,43 +42,9 @@
 		opacity: 0
 		visibility: hidden
 		transition: all .3s ease
-.pfoto-author
-	line-height: 1.2
-	margin-top: auto
-	margin-bottom: rem(20px)
-.author__avatar
-	border-radius: rem(8px)
-	border: 1px solid #FFFFFF
-	margin-bottom: rem(13px)
-.author__info
-	color: #ffffff
-	span
-		display: block
-.author__name
-	font-size: rem(30px)
-.photo__action
-	margin-top: auto
-	margin-bottom: auto
-	ul
-		display: flex
-		align-items: center
-		justify-content: center
-		margin: 0
-		padding: 0
-	li
-		list-style-type:  none
-		margin-right: rem(45px)
-		&:last-child
-			margin-right: 0
-	button
-		padding: 0
-		background-color: $tr
-		&:hover
-			.icon
-				transform: scale(1.3)
-	.icon
-		color: #fff
-		font-size: rem(28px)
-		transition: transform .2s ease
++media(575px)
+	.photos-wrapper
+		figure
+			margin-bottom: rem(10px)
 		
 	

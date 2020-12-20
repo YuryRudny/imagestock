@@ -1,0 +1,33 @@
+---
+layout: pages
+title: Избранное
+---
+
+<main>
+	<div class="container">
+		<div class="row row-center">
+			<div class="col col-lg-10">
+				<div class="title-area title-area--center">
+					<h3>Избранное</h3>
+				</div>
+				<ul class="grid-change">
+					<li>
+						<button class="grid-change__btn grid-change__btn--list">
+							<svg class="icon icon-list-icon">
+								<use xlink:href="assets/img/svg/symbol/sprite.svg#list-icon"></use>
+							</svg>
+						</button>
+					</li>
+					<li class="">
+						<button class="grid-change__btn grid-change__btn--grid active">
+							<svg class="icon icon-grid-icon">
+								<use xlink:href="assets/img/svg/symbol/sprite.svg#grid-icon"></use>
+							</svg>
+						</button>
+					</li>
+				</ul>
+				{{> photos_wrapper}}
+			</div>
+		</div>
+	</div>
+</main>
